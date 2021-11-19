@@ -3,7 +3,7 @@ import { getDataForTask3 } from '../js/dataController.js';
 const ctx = document.getElementById('placeholder3');
 
 const dataset = await getDataForTask3();
-console.log(dataset)
+
 const data = {
     labels: dataset.years,
     datasets: [
@@ -31,7 +31,6 @@ const config = {
     options: {
         responsive: true,
         plugins: {
-
             legend: {
                 position: 'top',
             },
@@ -39,23 +38,24 @@ const config = {
                 display: true,
                 align: 'center',
                 text: 'Распределение зависимости общего впечатления и описания'
-            },
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'visualFeedback'
-                    }
-                },
-                y: {
-                    title: {
-                        display: true,
-                        text: 'impressionTotal'
-                    }
-                }
             }
         },
-    },
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Распределение по годам'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Средняя оценка'
+                }
+            }
+        }
+
+    }
 };
 
 const lineChart = new Chart(ctx, config);

@@ -14,7 +14,7 @@ body {
 }
 
 .content {
-  background:rgb(254, 255, 248);
+  background:#fff;
 
   min-width: 560px;
   max-width: 1024px;
