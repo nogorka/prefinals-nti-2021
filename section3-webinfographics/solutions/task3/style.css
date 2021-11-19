@@ -1,0 +1,39 @@
+body {
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #dff0d6;
+}
+
+.content {
+  background:rgb(254, 255, 248);
+
+  min-width: 560px;
+  max-width: 1024px;
+  min-height: 100vh;
+  height: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.graph {
+}
+
+.intro {
+}
+
+h2 {
+  justify-content: center;
+}
+
+p {
+  text-align: justify;
+}

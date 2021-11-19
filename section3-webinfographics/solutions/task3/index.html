@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Visualization</title>
+    <script type="module" src="node_modules/chart.js/dist/chart.js"></script>
+    <script type="module" src="js/dataController.js"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="content">
+        <div class="intro">
+            <h2>Введение</h2>
+            <p>Ваша задача <strong>визуализировать метрики</strong> для каждого экспоната. Для выполнения данной
+                задачи мы используем библиотеку chart.js для языка javascript.
+
+                Чтобы не возникало неоднозначностей при решении задач, мы хотим сразу уточнить, какие параметры за что
+                отвечают.</p>
+            <p>
+                <strong>visualFeedback</strong> — это зрительное впечатление, это то, насколько посетителю понравилась
+                визуальное
+                представление экспоната.
+            </p>
+            <p>
+                <strong>impressionTotal</strong> — это общее впечатление об экспонате, то, насколько посетитель
+                находится под
+                впечатлением от экспоната, то насколько ему понравилась вся экспозиция (не только визуальное
+                представление).
+            </p>
+
+            <p> <strong>descriptionInformative</strong> — это информативность описания, показывает то, насколько верно
+                соответствует
+                описание экспаната его представлению.
+            </p>
+        </div>
+        <div class="graph">
+            <h2>Подзадача 1</h2>
+
+            <canvas id="placeholder1"></canvas>
+
+
+
+        </div>
+        <div class="graph">
+            <h2>Подзадача 2</h2>
+
+            <canvas id="placeholder2"></canvas>
+
+        </div>
+        <div class="graph">
+            <h2>Подзадача 3</h2>
+
+            <canvas id="placeholder3"></canvas>
+
+        </div>
+    </div>
+
+    <script type="module" src="js/task3.1.js"></script>
+    <script type="module" src="js/task3.2.js"></script>
+    <script type="module" src="js/task3.3.js"></script>
+
+</body>
+
+</html>
