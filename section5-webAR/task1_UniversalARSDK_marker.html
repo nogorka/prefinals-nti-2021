@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://libs.zappar.com/zappar-aframe/0.3.29/zappar-aframe.js"></script>
+
+    <meta charset="utf-8" />
+    <title>Zappar for A-Frame: Simple Image Tracking Example</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+
+        AFRAME.registerComponent("visibility-changer", {
+            init: function () {
+                this.el.sceneEl.addEventListener('zappar-visible', () => this.el.setAttribute("visible", true));
+                this.el.sceneEl.addEventListener('zappar-notvisible', () => this.el.setAttribute("visible", false));
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <a-scene>
+        <a-entity zappar-permissions-ui></a-entity>
+        <a-entity zappar-compatibility-ui></a-entity>
+
+        <a-camera zappar-camera></a-camera>
+
+        <a-entity zappar-image="target: assets/target.zpt">
+
+            <a-entity visibility-changer visible="false">
+
+                <a-plane color="#000000" material="transparent: true; opacity: 0.8" width="3.07" height="2.34"
+                    position="0 0 -0.01"></a-plane>
+
+                <a-entity text="align: center; width: 3; value: Overlay">
+                </a-entity>
+
+            </a-entity>
+        </a-entity>
+    </a-scene>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Face Mask</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://libs.zappar.com/zappar-aframe/0.3.29/zappar-aframe.js"></script>
+</head>
+
+<body>~
+    <a-scene>
+        <a-assets>
+            <img id="mask"
+                src="assets/mask-image.jpg">
+            </img>
+        </a-assets>
+
+        <a-entity zappar-permissions-ui id="permissions"></a-entity>
+        <a-entity zappar-compatibility-ui id="compatibility"></a-entity>
+
+        <a-camera zappar-camera="user-facing: true;" />
+
+        <a-entity zappar-face id="face-anchor">
+            <a-entity geometry="primitive: face-mesh; face: #face-anchor" material="src:#mask; transparent: true;">
+            </a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
